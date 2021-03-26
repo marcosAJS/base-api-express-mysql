@@ -14,7 +14,7 @@ export class UserController {
     try {
       const response = await this.userService.auth(email, password);
 
-      if (response.ok) {
+      if (response.ok) { 
         return res.status(200).json(response);
       }
 

@@ -34,7 +34,6 @@ class App {
     this.setConfig();
 
     this.initRoutes(this.router);
-
     
     this.app.use('/', this.router);
     
