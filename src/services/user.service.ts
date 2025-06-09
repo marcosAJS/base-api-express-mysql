@@ -31,7 +31,7 @@ export class UserService extends CrudService<User> {
     // gerar o token
     const token = jwt.sign(
       { id: found.id, email: found.email, name: found.name },
-      process.env.SECRET,
+      process.env.JWT_SECRET,
       { expiresIn: 60 * 60 * 24 /*  1 day */ }
     );
 
