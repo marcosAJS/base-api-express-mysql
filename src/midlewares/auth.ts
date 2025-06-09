@@ -21,7 +21,7 @@ const authGuard = (req: Request, res: Response, next: NextFunction) => {
     return res.status(401).json({ message: "Token malformatted" });
   }
 
-  jwt.verify(token, process.env.SECRET, (err, decoded) => {
+  jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
     if (err) return res.status(401).json({ message: "Invalid token" });
     return next();
   });
